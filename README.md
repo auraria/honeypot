@@ -23,7 +23,7 @@ python 3+, uses the following imports:
 
 # Usage
 
-This is multithreaded and can take multiple port arguments:
+This is multithreaded and can take multiple port arguments, however it cannot bind to a port if it's already bound:
 
 python .\honeypot.py 8888 8887 443 22
 
