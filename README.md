@@ -1,7 +1,9 @@
 # Honeypot
+
 This is a very simple multiport honeypot that outputs to the terminal and to a log file to the same directory as the script called honeypot.log.
 
 # Requirements
+
 python 3+, uses the following imports:
     import datetime
     
