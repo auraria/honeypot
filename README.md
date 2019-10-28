@@ -40,6 +40,4 @@ python .\honeypot.py 8888 8887 443 22
     Mon Oct 28 10:05:09 2019 : connection from: x.x.x.x on port: 443
     Mon Oct 28 10:05:09 2019 : connection from: x.x.x.x on port: 22
     
-# This will constantly run due to while loop
-
-Keyboard interrupt does not work for this loop, you will need to kill the python process to close this, been trying to fix this.
+# This will constantly run till you type exit in the console(updated v0.3)
