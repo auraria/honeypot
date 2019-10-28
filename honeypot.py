@@ -26,7 +26,7 @@ if __name__ == "__main__":
     def close():
         time.sleep(5)
         while True:
-            ifex = input("To close type exit: \n")
+            ifex = input("To close type exit: ")
             if ifex == "exit":
                 os._exit(1)
 
