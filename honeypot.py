@@ -9,6 +9,7 @@ if __name__ == "__main__":
 
     ports = sys.argv[1:]
     interface = ""
+
     def bind(p):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.bind((interface, int(p)))
@@ -16,13 +17,19 @@ if __name__ == "__main__":
         while True:
             s.listen(5)
             conn, addr = s.accept()
-            info = time.ctime() + " : connection from: " + \
-                addr[0] + " on port: " + str(p)
+            info = (time.ctime() + " : connection from: " + addr[0] + " on port: " + str(p))
             print(info)
-            f = open('honeypot.log', 'a')
+            f = open("honeypot.log", "a")
             conn.close()
             f.write(info + "\n")
             f.close()
+    def close():
+        time.sleep(5)
+        while True:
+            ifex = input("To close type exit: \n")
+            if ifex == "exit":
+                os._exit(1)
+
     jobs = []
     for p in ports:
         t = threading.Thread(target=bind, args=(p,))
@@ -30,3 +37,4 @@ if __name__ == "__main__":
         t.start()
     for j in jobs:
         j.join
+    close()
