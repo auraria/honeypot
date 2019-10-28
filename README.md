@@ -4,18 +4,26 @@ This is a very simple multiport honeypot that outputs to the terminal and to a l
 # Requirements
 python 3+, uses the following imports:
     import datetime
+    
     import fileinput
+    
     import os
+    
     import socket
+    
     import sys
+    
     import time
+    
     import threading
 
 
 # Usage
 
 This is multithreaded and can take multiple port arguments:
+
 python .\honeypot.py 8888 8887 443 22
+
     Listening on Port: 8888
     Listening on Port: 8887
     Listening on Port: 443
